@@ -9,8 +9,7 @@ body {
 .site-menu {
 	padding: 38px 0;
 	font-size: 18px;
-	font-weight: 700;
-	color: #000000;
+	color: rgba(0, 0, 0, 0.8);
 }
 
 .site-menu-title{
@@ -190,7 +189,7 @@ body {
 }
 .site-login-form{
 	float: right;
-	top: 10px;
+	top: 60px;
 	position: relative;
 	background:#ffffff;
 	overflow: visible;
@@ -201,7 +200,6 @@ body {
     font-size: 18px;
     font-family: "microsoft yahei";
     text-align: center;
-    border-bottom: 1px solid #f4f4f4;
     position: absolute;
     background: #fff;
     display: block;
@@ -218,50 +216,66 @@ body {
     position: absolute;
     left: 0;
     top: 18px;
-    border-right: 1px solid #f4f4f4;
     text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+.site-login-form .site-login-tab a.login-active{
+	color: #000000;
+}
+.site-login-form .site-login-box{
+	padding: 40px 30px;
+	background: #fff;
+	border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.site-login-form .site-login-box{
-	padding: 20px;
-	background: #fff;
-	border-top: 1px solid rgba(0, 0, 0, 0.6);
-}
-.form .item{
-	position: relative;
-    margin-bottom: 20px;
-}
-.form .item-fore1, .form .item-fore2{
-	border: 1px solid #bdbdbd;
-    height: 38px;
-    width: 304px;
-}
-.form .login-label{
-	width: 36px;
-  	height: 38px;
-  	background-color: #eeeeee;
-  	border-right: solid 1px #cccccc;
-}
-.form .name-label{
+.site-login-form .login-icon-username{
 	width: 18px;
   	height: 18px;
-  	object-fit: contain;
-  	background-image: url(images/login_icon_user.png);
+  	background-image: url(../images/login_icon_user.png);
 }
-.form .itxt{
-	line-height: 18px;
-    height: 18px;
-    border: 0;
-    padding: 10px 0 10px 50px;
-    width: 254px;
-    float: none;
-    overflow: hidden;
-    font-size: 14px;
-    font-family: '\5b8b\4f53';
-    position: absolute;
-    top: 10px;
+.site-login-form .login-icon-password{
+	width: 18px;
+  	height: 18px;
+  	background-image: url(../images/login_icon_pw.png);
 }
-
+.site-login-form .site-login-submit{
+  	height: 38px;
+  	width: 100%;
+  	color: #ffffff;
+  	font-size: 18px;
+  	background-color: #00e4ff;
+  	border: none;
+  	display: inline-block;
+}
+.site-login-form .site-login-forget-pwd{
+	color: rgba(0, 0, 0, 0.3);
+}
+.site-login-form .site-login-forget-pwd:hover{
+	color: #00cee6;
+	text-decoration: underline;
+}
+.site-login-form .site-login-download-code{
+	height: 138px;
+	width: 138px;
+	background-image: url(../images/download_code.png);
+	margin: auto;
+}
+.site-login-form .site-login-download-switch{
+	font-size: 18px;
+	border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	padding: 9px 19px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	width: 49%;
+	background-color: #ffffff;
+	color: rgba(0, 0, 0, 0.63);
+}
+.site-login-form .download-active{
+	border-color: #00e4ff;
+	color: #000000;
+}
 
 
 .site-login-footer{
