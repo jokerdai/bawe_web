@@ -168,15 +168,23 @@ body {
 	font-size: 18px;
 }
 .navbar-nav li.active{
-	border-bottom: 4px solid;
-	border-image: -webkit-linear-gradient(#00c9d0, #2899ee) 30 30;
-	border-image: -moz-linear-gradient(#00c9d0, #2899ee) 30 30;
-	border-image: linear-gradient(#00c9d0, #2899ee) 30 30;
+  	border-image-source: -webkit-radial-gradient(#00c9d0, #2899ee);
+  	border-image-source: -o-radial-gradient(#00c9d0, #2899ee);
+  	border-image-source: radial-gradient(#00c9d0, #2899ee);
+  	border-image-slice: 2;
+  	border-image-width: 1;
+	border-bottom: 4px solid transparent;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0; 
 }
 .navbar-nav li.cancle{
 	padding: 40px 40px;
 	background-color: #00e4ff;
 	border-bottom: 4px solid #00e4ff;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
 }
 .navbar-nav li a,.sub-navbar-nav li a {
 	color: rgba(0, 0, 0, 0.8);
