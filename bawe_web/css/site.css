@@ -485,7 +485,7 @@ body {
 }
 
 .site-login-container{
-  	height: 480px;
+  	height: 100%;
   	background-image: linear-gradient(to bottom, #043c70, #001440 46%, #006aae), linear-gradient(to top, #001729, #00265f);
 }
 .site-login-form{
@@ -584,6 +584,11 @@ body {
   	background-color: #e8e8e8;
   	padding: 35px 0;
   	color: #232323;
+  	margin-bottom: 0;
+  	bottom:0;
+  	right: 0;
+  	left: 0;
+  	position:fixed;
 }
 .footer {
 	font-size:16px;
