@@ -449,8 +449,12 @@ body {
 	margin: auto;
 	width: 118px;
   	height: 118px;
-  	opacity: 0.2;
-  	border: 1px solid #b2b2b2;
+  	/*opacity: 0.2;*/
+  	border-top: 5px solid #00e4ff;
+  	border-bottom: 5px solid #b2b2b2;
+  	border-left: 5px solid #b2b2b2;
+  	border-right: 5px solid #00e4ff;
+
   	border-radius: 59px;
 }
 .site-service-cycle-icon1,.site-service-cycle-icon2,.site-service-cycle-icon3,.site-service-cycle-icon4,.site-service-cycle-icon5{
