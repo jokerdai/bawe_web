@@ -484,6 +484,18 @@ body {
 	text-align: center;
 }
 
+.site-login-menu{
+	padding:40px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.site-login{
+	padding-top: 114px;
+	padding-bottom:130px; 
+  	height: 100%;
+}
 .site-login-container{
   	height: 100%;
   	background-image: linear-gradient(to bottom, #043c70, #001440 46%, #006aae), linear-gradient(to top, #001729, #00265f);
