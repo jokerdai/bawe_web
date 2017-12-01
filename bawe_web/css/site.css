@@ -493,7 +493,7 @@ body {
 }
 .site-login{
 	padding-top: 114px;
-	padding-bottom:130px; 
+	padding-bottom:160px; 
   	height: 100%;
 }
 .site-login-container{
@@ -594,7 +594,7 @@ body {
 .site-login-footer{
 	opacity: 0.6;
   	background-color: #e8e8e8;
-  	padding: 35px 0;
+  	padding: 20px 0 10px 0;
   	color: #232323;
   	margin-bottom: 0;
   	bottom:0;
