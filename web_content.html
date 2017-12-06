@@ -79,20 +79,29 @@
       <div class="container" style="padding: 45px 0">
 
         <div class="row" >
-          <div class="col-xs-3">
+          <div class="col-xs-3 site-webcontent-item">
             <img src="images/content_icon_pic1.png" class="site-webcontent-case-img" >
-            <div class="site-partner-item-detail">
-              协助浙江省档案馆集中统一管理省级档案资料，维护档案的完整，确保档案资料的安全。
+            <div class="site-webcontent-case-detail">
+              国家电网
             </div>
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-3 site-webcontent-item">
             <img src="images/content_icon_pic2.png" class="site-webcontent-case-img" >
+            <div class="site-webcontent-case-detail">
+              国家电网
+            </div>
           </div>
-          <div class="col-xs-3">
+          <div class="col-xs-3 site-webcontent-item">
             <img src="images/content_icon_pic3.png" class="site-webcontent-case-img" >
+            <div class="site-webcontent-case-detail">
+              国家电网
+            </div>
           </div>
-           <div class="col-xs-3">
+           <div class="col-xs-3 site-webcontent-item">
             <img src="images/content_icon_pic4.png" class="site-webcontent-case-img" >
+            <div class="site-webcontent-case-detail">
+              国家电网
+            </div>
           </div>
         </div>
       </div>
@@ -139,7 +148,14 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
-  </script>
+    $(function(){
+      $('.site-webcontent-item').mouseover(function(){
+        $(this).find(".site-webcontent-case-detail").show()
+      });
+      $('.site-webcontent-item').mouseleave(function(){
+        $(this).find(".site-webcontent-case-detail").hide()
+      });
+    })
+    </script>
   </body>
 </html>

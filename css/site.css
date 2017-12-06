@@ -327,6 +327,19 @@
 	.site-webcontent-case-img{
 		width: 230px;
 	}
+	.site-webcontent-case-detail{
+		position: absolute;
+		top: 0;
+		height: 145px;
+		line-height: 145px;
+		width: 230px;
+		opacity: 0.6;
+	  	background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), linear-gradient(to bottom, #00c9d0, #2899ee);
+	  	color: #ffffff;
+	  	text-align: center;
+	  	font-size: 24px;
+	  	display: none;
+	}
 	.site-case-item-img{
 		width: 300px;
 	}
@@ -348,18 +361,19 @@
 	.site-webcontent-case-img{
 		width: 270px;
 	}
-	/*.site-partner-item-detail{
+	.site-webcontent-case-detail{
 		position: absolute;
 		top: 0;
-		height: 160px;
+		height: 145px;
+		line-height: 145px;
 		width: 270px;
 		opacity: 0.6;
 	  	background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16)), linear-gradient(to bottom, #00c9d0, #2899ee);
 	  	color: #ffffff;
-	  	font-size: 14px;
-	  	padding: 50px 29px;
+	  	text-align: center;
+	  	font-size: 24px;
 	  	display: none;
-	}*/
+	}
 	.site-case-item-img{
 		width: 370px;
 	}
