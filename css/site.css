@@ -647,7 +647,8 @@
 }
 
 .site-login-menu{
-	padding:35px 0;
+	font-size: 18px;
+	padding:29px 0;
 	position: fixed;
 	top: 0;
 	left: 0;
