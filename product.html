@@ -65,10 +65,59 @@
             </ul>
           </div>
         </div>
-      </div>
-
-      <div class="container" style="margin-top:60px;">
+      </div>    
+      <div class="container" style="position:relative;margin-top:60px;">
         <img src="images/web_product1.png" class="img-responsive">
+        <div id="fadein1" style="top: 29.5%;left: 14%;" class="site-product-text-title">
+          Web终端管理应用
+        </div>
+        <div id="fadein2" style="top: 34%;left: 14%;" class="site-product-text-sub-title">
+          可视化管理
+        </div>
+        <div id="fadein3"  style="top: 36%;left: 14%;" class="site-product-text-content">
+          <p>可视化管理界面，直观的掌握库房运行</p>
+          <p>状态，一站式对库房进行相关管理</p>
+        </div>
+        <div id="fadein4" style="top: 40%;left: 14%;" class="site-product-text-sub-title">
+          个性化定制
+        </div>
+        <div id="fadein5" style="top: 42%;left: 14%;" class="site-product-text-content">
+          功能和界面风格均可定制开发
+        </div>
+
+        <div id="fadein6" style="bottom: 43.3%;right: 15%;" class="site-product-text-title">
+          手机终端管理应用
+        </div>
+        <div id="fadein7" style="bottom: 40%;right: 22.2%;" class="site-product-text-sub-title">
+          移动互联技术
+        </div>
+        <div id="fadein8" style="bottom: 36%;right: 11%;" class="site-product-text-content">
+          <p>移动办公，馆内随时查看库房运行状态</p>
+          <p>安全隐患及时预警</p>
+        </div>
+        <div id="fadein9" style="bottom: 34%;right: 23.9%;" class="site-product-text-sub-title">
+          个性化定制
+        </div>
+        <div id="fadein10" style="bottom: 32%;right: 16%;" class="site-product-text-content">
+          功能和界面风格均可定制开发
+        </div>
+
+        <div id="fadein11" style="bottom: 18%;left: 14%;" class="site-product-text-title">
+          密集架端管理应用
+        </div>
+        <div id="fadein12" style="bottom: 14%;left: 14%;" class="site-product-text-sub-title">
+          智能操作
+        </div>
+        <div id="fadein13" style="bottom: 12%;left: 14%;" class="site-product-text-content">
+          开架、闭架等操作智能控制
+        </div>
+        <div id="fadein14" style="bottom: 10%;left: 14%;" class="site-product-text-sub-title">
+          数据感知
+        </div>
+        <div id="fadein15" style="bottom: 6%;left: 14%;" class="site-product-text-content">
+          <p>密集架操作记录、库房环境等数据自</p>
+          <p>动感知，并存档纪录</p>
+        </div>
       </div>
 
 
@@ -114,7 +163,39 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
+    $(function(){
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 400) {
+          $('#fadein1').fadeIn(1000,function(){
+            $('#fadein2').fadeIn(3000);
+            $('#fadein3').fadeIn(3000);
+            $('#fadein4').fadeIn(3000);
+            $('#fadein5').fadeIn(3000);
+          });
+         
+        }
+        if (scrollTop > 800) {
+          $('#fadein6').fadeIn(1000,function(){
+            $('#fadein7').fadeIn(3000);
+            $('#fadein8').fadeIn(3000);
+            $('#fadein9').fadeIn(3000);
+            $('#fadein10').fadeIn(3000);
+          });
+        }
+
+        if (scrollTop > 1400) {
+          $('#fadein11').fadeIn(1000,function(){
+            $('#fadein12').fadeIn(3000);
+            $('#fadein13').fadeIn(3000);
+            $('#fadein14').fadeIn(3000);
+            $('#fadein15').fadeIn(3000);
+          });
+          
+        }
+      })  
+
+    })
   </script>
   </body>
 </html>

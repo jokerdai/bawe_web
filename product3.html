@@ -67,8 +67,44 @@
         </div>
       </div>
 
-      <div class="container" style="margin-top:60px;">
+      <div class="container" style="margin-top:60px;position: relative;">
         <img src="images/web_product3.png" class="img-responsive">
+        <div id="fadein1" style="top: 9.5%;left: 14%;" class="site-product-text-title">
+          Web终端管理应用
+        </div>
+        <div id="fadein2" style="top: 17%;left: 14%;" class="site-product-text-sub-title">
+          360°无死角监控
+        </div>
+        <div id="fadein3"  style="top: 21%;left: 14%;" class="site-product-text-content">
+          <p>库房画面一目了然，监控360°无死</p>
+          <p>角，可进行常规的视频监控操作</p>
+        </div>
+        <div id="fadein4" style="top: 28%;left: 14%;" class="site-product-text-sub-title">
+          视频回溯
+        </div>
+        <div id="fadein5" style="top: 32%;left: 14%;" class="site-product-text-content">
+          <p>针对库房的异常情况，可进行视频</p>
+          <p>回溯，排查缘由，支持定制开发</p>
+        </div>
+
+        <div id="fadein6" style="top: 59.8%;right: 15%;" class="site-product-text-title">
+          手机终端管理应用
+        </div>
+        <div id="fadein7" style="top: 66%;right: 20.5%;" class="site-product-text-sub-title">
+          稳定的视频画面
+        </div>
+        <div id="fadein8" style="top: 70%;right: 14.5%;" class="site-product-text-content">
+          <p>视频画面美观稳定，让管理者全</p>
+          <p>面监控库房状态与操作流程</p>
+        </div>
+        <div id="fadein9" style="top: 76%;right: 25.2%;" class="site-product-text-sub-title">
+          视频回溯
+        </div>
+        <div id="fadein10" style="top: 80%;right: 14.5%;" class="site-product-text-content">
+           <p>针对库房的异常情况，可进行视</p>
+           <p>频回溯，排查缘由</p>
+        </div>
+        
       </div>
 
 
@@ -114,7 +150,27 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
+    $(function(){
+      $('#fadein1').fadeIn(1000,function(){
+          $('#fadein2').fadeIn(3000);
+          $('#fadein3').fadeIn(3000);
+          $('#fadein4').fadeIn(3000);
+          $('#fadein5').fadeIn(3000);
+        });
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        
+        if (scrollTop > 400) {
+          $('#fadein6').fadeIn(1000,function(){
+            $('#fadein7').fadeIn(3000);
+            $('#fadein8').fadeIn(3000);
+            $('#fadein9').fadeIn(3000);
+            $('#fadein10').fadeIn(3000);
+          });
+        }
+      })  
+
+    })
   </script>
   </body>
 </html>

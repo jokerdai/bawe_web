@@ -190,12 +190,12 @@
 	font-size: 18px;
 }
 .navbar-nav li.active{
-  	border-image-source: -webkit-radial-gradient(#00c9d0, #2899ee);
-  	border-image-source: -o-radial-gradient(#00c9d0, #2899ee);
-  	border-image-source: radial-gradient(#00c9d0, #2899ee);
-  	border-image-slice: 2;
-  	border-image-width: 1;
-	border-bottom: 4px solid transparent;
+  	/*border-image-source: -webkit-radial-gradient(#00c9d0, #2899ee);
+  	border-image-source: -o-radial-gradient(#00c9d0, #2899ee);*/
+  	/*border-image-source: radial-gradient(#00c9d0, #2899ee);*/
+  	/*border-image-slice: 2;
+  	border-image-width: 1;*/
+	border-bottom: 4px solid #2899ee;
 	border-top: 0;
 	border-left: 0;
 	border-right: 0; 
@@ -401,8 +401,91 @@
 	margin: 0;
 }
 
+.flip-container:hover .back, .flip-container.hover .back {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+.flip-container:hover .front, .flip-container.hover .front {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-ms-transition: 0.6s;
+
+	-moz-transition: 0.6s;
+	-moz-transform: perspective(1000px);
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	background: lightgreen;
+	z-index: 2;
+}
+
+/* back, initially hidden pane */
+.back {
+	background: lightblue;
+	-webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+}
 @media screen and (min-width: 1200px){
+	/* entire container, keeps perspective */
+	.flip-container {
+		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
+
+		-ms-transform: perspective(1000px);
+		-moz-transform: perspective(1000px);
+    	-moz-transform-style: preserve-3d; 
+    	-ms-transform-style: preserve-3d; 
+		height: 200px;
+	}
 	.site-partner-item-img{
+		background-color: #ffffff;
 		border: 1px solid rgba(0,0,0,0.4);
 		width: 270px;
 		height: 200px;
@@ -414,6 +497,7 @@
 		width: 98px;
 	}
 	.site-partner-item-detail{
+		border: 1px solid rgba(0,0,0,0.4);
 		position: absolute;
 		top: 0;
 		height: 200px;
@@ -423,10 +507,15 @@
 	  	color: #ffffff;
 	  	font-size: 14px;
 	  	padding: 65px 29px;
-	  	display: none;
+	  
 	}
 }
 @media screen and (max-width: 1199px) and (min-width: 992px){
+	/* entire container, keeps perspective */
+	.flip-container {
+		perspective: 1000;
+		height: 160px;
+	}
     .site-partner-item-img{
 		border: 1px solid rgba(0,0,0,0.4);
 		width: 220px;
@@ -439,6 +528,7 @@
 		width: 98px;
 	}
 	.site-partner-item-detail{
+		border: 1px solid rgba(0,0,0,0.4);
 		position: absolute;
 		top: 0;
 		height: 160px;
@@ -448,7 +538,6 @@
 	  	color: #ffffff;
 	  	font-size: 14px;
 	  	padding: 30px 29px;
-	  	display: none;
 	}
 }
 
@@ -656,6 +745,25 @@
 	color: rgba(0, 0, 0, 0.8);
 	opacity: 0.8;
 	text-align: center;
+}
+.site-product-text-title{
+	position: absolute;
+	color: #00b7cc;
+	font-size: 24px;
+	display: none;
+}
+.site-product-text-sub-title{
+	position: absolute;
+	color: #000000;
+	font-size: 18px;
+	display: none;
+}
+.site-product-text-content{
+	position: absolute;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 14px;
+	opacity: 0.8;
+	display: none;
 }
 
 .site-login-menu{

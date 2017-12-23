@@ -70,8 +70,46 @@
 
     
 
-      <div class="container" style="margin-top:60px;">
+      <div class="container" style="margin-top:60px;position: relative;">
         <img src="images/web_product4.png" class="img-responsive">
+        <div id="fadein1" style="top: 9.5%;left: 14%;" class="site-product-text-title">
+          Web终端管理应用
+        </div>
+        <div id="fadein2" style="top: 17%;left: 14%;" class="site-product-text-sub-title">
+          实时预警
+        </div>
+        <div id="fadein3"  style="top: 21%;left: 14%;" class="site-product-text-content">
+          <p>自动感知库房数据变化，并进行</p>
+          <p>自我分析。针对异常情况进行及</p>
+          <p>时预警，保障档案安全</p>
+        </div>
+        <div id="fadein4" style="top: 31%;left: 14%;" class="site-product-text-sub-title">
+          处理和未处理
+        </div>
+        <div id="fadein5" style="top: 36%;left: 14%;" class="site-product-text-content">
+          <p>报警信息是否处理一目了然，同时</p>
+          <p>支持报表统计</p>
+        </div>
+
+        <div id="fadein6" style="top: 59.8%;right: 15%;" class="site-product-text-title">
+          手机终端管理应用
+        </div>
+        <div id="fadein7" style="top: 66%;right: 22%;" class="site-product-text-sub-title">
+          移动互联技术
+        </div>
+        <div id="fadein8" style="top: 70%;right: 16.8%;" class="site-product-text-content">
+          <p>馆内可随时查看库房运行</p>
+          <p>面状态，实现移动办公，安</p>
+          <p>全问题及时预警</p>
+        </div>
+        <div id="fadein9" style="top: 80%;right: 22%;" class="site-product-text-sub-title">
+          直接指派工作
+        </div>
+        <div id="fadein10" style="top: 85%;right: 13.2%;" class="site-product-text-content">
+           <p>针对未处理的报警消息，领导可直</p>
+           <p>接指派人员进行处理，同时具备一</p>
+           <p>键拨打电话功能</p>
+        </div>
       </div>
 
 
@@ -117,7 +155,27 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
+    $(function(){
+      $('#fadein1').fadeIn(1000,function(){
+          $('#fadein2').fadeIn(3000);
+          $('#fadein3').fadeIn(3000);
+          $('#fadein4').fadeIn(3000);
+          $('#fadein5').fadeIn(3000);
+        });
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        
+        if (scrollTop > 400) {
+          $('#fadein6').fadeIn(1000,function(){
+            $('#fadein7').fadeIn(3000);
+            $('#fadein8').fadeIn(3000);
+            $('#fadein9').fadeIn(3000);
+            $('#fadein10').fadeIn(3000);
+          });
+        }
+      })  
+
+    })
   </script>
   </body>
 </html>

@@ -69,8 +69,63 @@
 
       
 
-      <div class="container" style="margin-top:60px;">
+      <div class="container" style="margin-top:60px;position: relative;">
         <img src="images/web_product2.png" class="img-responsive">
+        <div id="fadein1" style="top: 6.5%;left: 14%;" class="site-product-text-title">
+          Web终端管理应用
+        </div>
+        <div id="fadein2" style="top: 12%;left: 14%;" class="site-product-text-sub-title">
+          全方位掌握档案馆人物
+        </div>
+        <div id="fadein3"  style="top: 15%;left: 14%;" class="site-product-text-content">
+          <p>全方位解读档案馆运行状况，自</p>
+          <p>动汇总馆藏、报警、环境等数据</p>
+        </div>
+        <div id="fadein4" style="top: 20%;left: 14%;" class="site-product-text-sub-title">
+          智能生成可视化报表
+        </div>
+        <div id="fadein5" style="top: 23%;left: 14%;" class="site-product-text-content">
+          <p>丰富的数据图表细致解读档案馆</p>
+          <p>状况，查看业务趋势，及时发现</p>
+          <p>突破点，助力档案馆提升政绩</p>
+        </div>
+
+        <div id="fadein6" style="top: 38.8%;right: 15%;" class="site-product-text-title">
+          手机终端管理应用
+        </div>
+        <div id="fadein7" style="top: 44%;right: 25.2%;" class="site-product-text-sub-title">
+          随时查看
+        </div>
+        <div id="fadein8" style="top: 47%;right: 14.5%;" class="site-product-text-content">
+          <p>在档案馆内可随时查看档案馆运</p>
+          <p>行数据，简单方便</p>
+        </div>
+        <div id="fadein9" style="top: 51%;right: 25%;" class="site-product-text-sub-title">
+          实时汇总
+        </div>
+        <div id="fadein10" style="top: 54%;right: 13.3%;" class="site-product-text-content">
+           <p>管理者可实时获取汇总结果，数据</p>
+           <p>化管理，省时省力</p>
+        </div>
+
+        <div id="fadein11" style="bottom: 24%;left: 14%;" class="site-product-text-title">
+          密集架端管理应用
+        </div>
+        <div id="fadein12" style="bottom: 20%;left: 14%;" class="site-product-text-sub-title">
+          自我感知
+        </div>
+        <div id="fadein13" style="bottom: 15%;left: 14%;" class="site-product-text-content">
+          <p>自我感知库房环境数据，实时记</p>
+          <p>录数据变化</p>
+        </div>
+        <div id="fadein14" style="bottom: 13%;left: 14%;" class="site-product-text-sub-title">
+          实时盘点
+        </div>
+        <div id="fadein15" style="bottom: 6%;left: 14%;" class="site-product-text-content">
+          <p>图表展现形式，可供库房管理者</p>
+          <p>直观查看本区域内实体档案资源</p>
+          <p>直盘点情况</p>
+        </div>
       </div>
 
 
@@ -116,7 +171,36 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    
-  </script>
+    $(function(){
+      $('#fadein1').fadeIn(1000,function(){
+          $('#fadein2').fadeIn(3000);
+          $('#fadein3').fadeIn(3000);
+          $('#fadein4').fadeIn(3000);
+          $('#fadein5').fadeIn(3000);
+        });
+      $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 500) {
+          $('#fadein6').fadeIn(1000,function(){
+            $('#fadein7').fadeIn(3000);
+            $('#fadein8').fadeIn(3000);
+            $('#fadein9').fadeIn(3000);
+            $('#fadein10').fadeIn(3000);
+          });
+        }
+
+        if (scrollTop > 1000) {
+          $('#fadein11').fadeIn(1000,function(){
+            $('#fadein12').fadeIn(3000);
+            $('#fadein13').fadeIn(3000);
+            $('#fadein14').fadeIn(3000);
+            $('#fadein15').fadeIn(3000);
+          });
+          
+        }
+      })  
+
+    })
+    </script>
   </body>
 </html>
