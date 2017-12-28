@@ -457,13 +457,13 @@
 .front {
 	-webkit-transform: rotateY(0deg);
 	-ms-transform: rotateY(0deg);
-	background: lightgreen;
+	background: #ffffff;
 	z-index: 2;
 }
 
 /* back, initially hidden pane */
 .back {
-	background: lightblue;
+	background: #ffffff;
 	-webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
     -o-transform: rotateY(-180deg);
@@ -477,7 +477,6 @@
 		-moz-perspective: 1000;
 		-ms-perspective: 1000;
 		perspective: 1000;
-
 		-ms-transform: perspective(1000px);
 		-moz-transform: perspective(1000px);
     	-moz-transform-style: preserve-3d; 
@@ -507,7 +506,17 @@
 	  	color: #ffffff;
 	  	font-size: 14px;
 	  	padding: 65px 29px;
-	  
+	}
+	.site-product-bg-panel .site-product-img-pic{
+		float:right;
+		margin-right:5%;
+		margin-top:5%;
+		width: 550px;
+	}
+	.site-product-bg-panel .site-product-img-pic-left{
+		margin-left:5%;
+		margin-top:5%;
+		width: 550px;
 	}
 }
 @media screen and (max-width: 1199px) and (min-width: 992px){
@@ -538,6 +547,17 @@
 	  	color: #ffffff;
 	  	font-size: 14px;
 	  	padding: 30px 29px;
+	}
+	.site-product-bg-panel .site-product-img-pic{
+		float:right;
+		margin-right:5%;
+		margin-top:5%;
+		width: 400px;
+	}
+	.site-product-bg-panel .site-product-img-pic-left{
+		margin-left:5%;
+		margin-top:5%;
+		width: 400px;
 	}
 }
 
@@ -746,6 +766,58 @@
 	opacity: 0.8;
 	text-align: center;
 }
+.site-product-bg-panel{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	height:100%;
+}
+
+.site-product-bg-panel .content-panel{
+	position:relative;
+	margin-left:100px;
+	margin-top:7%;
+}
+.site-product-bg-panel .content-panel-right{
+	position:absolute;
+	right: 0;
+	top: 10%;
+	width: 450px;
+}
+.site-product-bg-panel .icon_line {
+	position:absolute;
+	top:60px;
+	left:0;
+	width:350px;
+}
+.site-product-bg-panel  .content-panel-title{
+	position: absolute;
+	color: #00b7cc;
+	font-size: 24px;
+	top:10px;
+	left:80px;
+	display: none;
+}
+.site-product-bg-panel  .content-text{
+	position:absolute;
+	top:80px;
+	left:80px;
+	width:100%;
+	display: none;
+}
+.site-product-bg-panel  .content-text-sub-title{
+	color: #000000;
+	font-size: 18px;
+	margin-top: 25px;
+}
+.site-product-bg-panel  .content-text-content{
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 14px;
+	opacity: 0.8;
+	margin-top: 20px;
+}
+
 .site-product-text-title{
 	position: absolute;
 	color: #00b7cc;
