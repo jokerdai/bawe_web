@@ -272,7 +272,7 @@
 				<div style="position:relative">
 
 					<img id="partner_img" style="position:absolute;top:3%;right:38%;cursor:pointer;" width="150px" height="96px" src="images/partner_pic1.png" class="" >
-					<img style="position:absolute;top:15%;right:35%;cursor:pointer;" src="images/partner_pic_shadow.png" class="img-responsive" >
+					<img id="partner_pic_shadow" style="position:absolute;top:15%;right:35%;cursor:pointer;" src="images/partner_pic_shadow.png" class="img-responsive" >
 					
 					<img id="zgrmfy" style="position:absolute;top:30%;right:31%;cursor:pointer;" src="images/partner_map_icon_position.png" class="img-responsive click-partner-icon" >
 					<img style="position:absolute;top:36%;right:24.5%;cursor:pointer;" src="images/mapgif.gif" class="img-responsive" >
@@ -296,7 +296,7 @@
 					<img style="position:absolute;bottom:3%;right:33%;cursor:pointer;" width="180px" src="images/mapgif.gif" class="img-responsive" >
 					<div style="position:absolute;bottom:10%;right:28%;font-size:20.4px;color: #005466;">海南省档案馆</div>
 					<img id="scstsg" style="position:absolute;bottom:37%;left:49%;cursor:pointer;" width="32px" height="46px" src="images/partner_map_icon_position.png"  class="img-responsive click-partner-icon" >
-					<img style="position:absolute;bottom:32%;left:43%;cursor:pointer;" width="160px" src="images/mapgif.gif" class="img-responsive" >
+					<img  style="position:absolute;bottom:32%;left:43%;cursor:pointer;" width="160px" src="images/mapgif.gif" class="img-responsive" >
 					<div style="position:absolute;bottom:39%;left:53%;font-size:20.4px;color: #005466;">四川省图书馆</div>
 					<img src="images/partner_map_bg.png" class="img-responsive" >
 				</div>
@@ -700,7 +700,9 @@
 				$(this).find(".site-partner-item-detail").hide()
 			});
 
-			$('.click-partner-icon').click(function(){
+			$('.click-partner-icon').mouseover(function(){
+				$('#partner_pic_shadow').css({"top":"15%","right":"35%"});
+				$('#partner_img').css({"top":"3%","right":"38%"});
 				var id = $(this).attr('id')
 				if (id == 'zgrmfy') {
 					$('#partner_img').attr('src','images/partner_pic1.png')
@@ -726,6 +728,19 @@
 				if (id == 'scstsg') {
 					$('#partner_img').attr('src','images/partner_pic1.png')
 				}
+			});
+			$('#hnsdag').mouseover(function(){
+				$('#partner_pic_shadow').css({"top":"87%","right":"44%"});
+				$('#partner_img').css({"top":"75%","right":"47%"});
+			});
+			$('#scstsg').mouseover(function(){
+				$('#partner_pic_shadow').css({"top":"57%","right":"49%"});
+				$('#partner_img').css({"top":"45%","right":"52%"});
+			});
+
+			$('#hnsdag,#scstsg').mouseleave(function(){
+				$('#partner_pic_shadow').css({"top":"15%","right":"35%"});
+				$('#partner_img').css({"top":"3%","right":"38%"});
 			})
 
 		});
